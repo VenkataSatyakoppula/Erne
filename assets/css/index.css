@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+/* #591BC5,#6f7bec*/
+  /* ============= Animation background ========= */
+body {
+    background: linear-gradient(132deg, #591BC5, black, #212335);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0px;
+    overflow-y: scroll;
+}
+.cube {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: solid 1px #D7D4E4;
+    transform-origin: top left;
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+    border-color: #FFF ;
+}
+.cube:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+}
+.cube:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+}
+.cube:nth-child(4) {
+    animation-delay: 6s;
+    left: 100vw;
+    top: 10vh;
+}
+.cube:nth-child(5) {
+    animation-delay: 8s;
+    left: 20vw;
+    top: 85vh;
+}
+.cube:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+}
+  /* Animate Background*/
+@keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+@keyframes cube {
+    from {
+      transform: scale(0) rotate(0deg) translate(-50%, -50%);
+      opacity: 1;
+    }
+    to {
+      transform: scale(20) rotate(960deg) translate(-50%, -50%);
+      opacity: 0;
+    }
+} 
+.logo img{
+    height: 125px;
+    width: 125px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.header .social-links a img{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+}
+.header .social-links a .twitter{
+    top:30px;
+    right: 70px;
+}
+.header .social-links a .discord{
+    top: 30px;
+    right: 120px;
+}
+.header .social-links a .linkedin{
+    top: 30px;
+    right: 170px;
+}
+.header .social-links a .gmail{
+    top: 30px;
+    right: 220px;
+}
+.header .logo{
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    color:white;
+}
+.content {
+    position: absolute;
+    top: 250px;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 40px;
+    left: 60px;
+    color:white;
+    /* border: 2px solid red; */
+}
+.content span{
+    font-size: 60px;
+    color: white;
+    font-weight: 600;
+}
+
+.timer{
+    position: absolute;
+    top: 255px;
+    left: 1000px;
+    font-size: 50px;
+    color: #6f7bec;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.timer .rem{
+    position: relative;
+    font-size: 25px;
+    top: -10px;
+    color: #D7D4E4;
+    
+}
+.timer .day{
+    font-size: 80px;
+    color: #D7D4E4;
+    font-weight: 400;
+}
+
+.subs{
+  position: absolute;
+  height: 150px;
+  width: 200px;
+  top: 600px;
+  left: 650px;
+}
+.custom-field {
+    position: relative;
+    font-size: 14px;
+    border-top: 10px solid transparent;
+    margin-bottom: 5px;
+    --field-padding: 12px;
+}
+  
+.custom-field input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: var(--field-padding);
+    border-radius: 10px;
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+    opacity: .3;
+}
+  
+.custom-field .placeholder {
+    position: absolute;
+    left: var(--field-padding);
+    width: calc(100% - (var(--field-padding) * 2));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 10px;
+    line-height: 100%;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 
+      top 0.3s ease,
+      color 0.3s ease,
+      font-size 0.3s ease;
+}
+  
+.custom-field input.dirty + .placeholder,
+.custom-field input:focus + .placeholder,
+.custom-field input:not(:placeholder-shown) + .placeholder {
+    top: -10px;
+    font-size: 10px;
+    color: white;
+}
+  
+.custom-field .error-message {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    font-size: 12px;
+    background: #d30909;
+    color: #fff;
+    height: 24px;
+}
+  
+.custom-field .error-message:empty {
+    opacity: 0;
+}
+
+.button {
+    position: relative;
+    background-color: #6f7bec; 
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    left: 50px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: white; 
+    color: #6f7bec;
+}
+@media screen and (max-width:1056px) and (min-width:486px){
+    .timer{
+        position: absolute;
+        top: 550px;
+        left: 60px;
+        font-size: 50px;
+        color: #6f7bec;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .subs{
+        position: absolute;
+        height: 150px;
+        width: 200px;
+        left: 60px;
+        top: 950px;
+    }
+}
+@media screen and (min-width:1204px) and (max-width:1500px){
+    .timer{
+        top: 255px;
+        left: 750px;
+        min-width: 500px;
+    }
+    .subs{
+        position: absolute;
+        height: 150px;
+        width: 200px;
+        left: 450px;
+        top: 600px;
+    }
+}
+@media screen and (min-width:1057px) and (max-width:1200px){
+    .timer{
+        top: 255px;
+        left: 600px;
+        min-width: 500px;
+    }
+    .subs{
+        position: absolute;
+        height: 150px;
+        width: 200px;
+        left: 400px;
+        top: 600px;
+    }
+}
+@media screen and (max-width:486px){
+    .header .social-links a .twitter{
+        top:30px;
+        right: 10px;
+    }
+    .header .social-links a .discord{
+        top: 80px;
+        right: 10px;
+    }
+    .header .social-links a .linkedin{
+        top: 130px;
+        right: 10px;
+    }
+    .header .social-links a .gmail{
+        top: 180px;
+        right: 10px;
+    }
+    .timer{
+        position: absolute;
+        top: 550px;
+        left: 60px;
+        font-size: 50px;
+        color: #6f7bec;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .subs{
+        position: absolute;
+        height: 150px;
+        width: 200px;
+        left: 60px;
+        top: 950px;
+    }
+}
