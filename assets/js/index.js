@@ -1,4 +1,4 @@
-var des = new Date("june 19,2021 18:00:00").getTime();
+var des = new Date("june 19,2022 18:00:00").getTime();
 var interval = setInterval(function(){
 var now = new Date().getTime()
 
